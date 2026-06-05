@@ -1,0 +1,10 @@
+flask
+flask-cors
+pymongo
+huggingface-hub
+sentence-transformers
+faiss-cpu
+pypdf
+python-docx
+python-dotenv
+numpy

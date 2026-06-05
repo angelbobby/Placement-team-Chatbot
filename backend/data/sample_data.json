@@ -1,0 +1,113 @@
+{
+  "companies": [
+    {
+      "name": "Microsoft",
+      "role": "Software Engineering Intern / FTE",
+      "package": "51.0 LPA",
+      "cgpa": 8.5,
+      "branches": ["CSE", "ISE", "ECE", "EEE"],
+      "backlogs_allowed": 0,
+      "description": "Microsoft is a global leader in software, services, devices, and solutions. The Software Engineer role involves building scalable cloud services, operating system components, and developer tools.",
+      "recruitment_process": "1. Online Assessment (3 Coding Questions on DS/Algo)\n2. Technical Round 1 (System Design & Code Optimization)\n3. Technical Round 2 (Algorithms & Problem Solving)\n4. Hiring Manager / Cultural Fit Round"
+    },
+    {
+      "name": "Amazon",
+      "role": "Software Development Engineer (SDE-1)",
+      "package": "45.0 LPA",
+      "cgpa": 8.0,
+      "branches": ["CSE", "ISE", "ECE", "EEE", "MECH"],
+      "backlogs_allowed": 0,
+      "description": "Amazon is a customer-centric multinational technology company focusing on e-commerce, cloud computing, online advertising, and digital streaming.",
+      "recruitment_process": "1. Online Assessment (Debugging + Coding + Work Style Simulation)\n2. Technical Round 1 (Data Structures, Algorithms & Leadership Principles)\n3. Technical Round 2 (Deep dive into project architecture & coding)\n4. Bar Raiser Round (General intelligence & culture fit)"
+    },
+    {
+      "name": "Google",
+      "role": "Associate Software Engineer",
+      "package": "38.5 LPA",
+      "cgpa": 8.5,
+      "branches": ["CSE", "ISE", "ECE"],
+      "backlogs_allowed": 0,
+      "description": "Google specializes in Internet-related services and products, which include online advertising technologies, a search engine, cloud computing, software, and hardware.",
+      "recruitment_process": "1. Online Coding Challenge (Google Online Challenge)\n2. Technical Round 1 (Advanced Data Structures - Graphs, DP)\n3. Technical Round 2 (Ad-hoc Algorithms & Complexity analysis)\n4. Technical Round 3 (System design & scaling)\n5. Googleyness & Leadership Round"
+    },
+    {
+      "name": "TCS",
+      "role": "TCS Ninja / Digital / Prime",
+      "package": "3.36 - 9.0 LPA",
+      "cgpa": 6.0,
+      "branches": ["CSE", "ISE", "ECE", "EEE", "MECH", "CIVIL", "CHEM"],
+      "backlogs_allowed": 1,
+      "description": "Tata Consultancy Services is an IT services, consulting, and business solutions organization that has been partnering with many of the world's largest businesses.",
+      "recruitment_process": "1. TCS NQT (National Qualifier Test) - Aptitude, Reasoning, Coding\n2. Technical Interview (Fundamentals of OOPS, DBMS, SQL, Basic coding)\n3. HR & Managerial Interview"
+    },
+    {
+      "name": "Accenture",
+      "role": "Associate Software Engineer / Advanced ASE",
+      "package": "4.5 - 6.5 LPA",
+      "cgpa": 6.5,
+      "branches": ["CSE", "ISE", "ECE", "EEE", "MECH", "CIVIL"],
+      "backlogs_allowed": 0,
+      "description": "Accenture is a professional services company with leading capabilities in digital, cloud, and security. They provide strategy, consulting, and technology services.",
+      "recruitment_process": "1. Cognitive and Technical Assessment\n2. Coding Assessment (2 questions)\n3. Communication Assessment\n4. Technical & HR Interview (Combined)"
+    },
+    {
+      "name": "Adobe",
+      "role": "Product Engineer",
+      "package": "28.0 LPA",
+      "cgpa": 8.0,
+      "branches": ["CSE", "ISE", "ECE"],
+      "backlogs_allowed": 0,
+      "description": "Adobe is an American multinational computer software company best known for its multimedia and creativity software products, including Photoshop and Acrobat.",
+      "recruitment_process": "1. Online Aptitude & Coding Test\n2. Technical Interview 1 (OOPs design, DS/Algo)\n3. Technical Interview 2 (Data structures & system performance optimization)\n4. HR Interview"
+    }
+  ],
+  "faqs": [
+    {
+      "category": "Eligibility & Registration",
+      "question": "What is the policy regarding active backlogs for placements?",
+      "answer": "Most premium (Tier-1) companies require zero active backlogs at the time of recruitment. Mass recruiters like TCS allow up to 1 active backlog, provided the student clears it before joining. It is highly recommended to clear all backlogs before the placement season begins in July."
+    },
+    {
+      "category": "Placement Policy",
+      "question": "Can I apply for another company after receiving a job offer?",
+      "answer": "Our placement cell operates on a graded offer policy: \n1. If you get a Normal offer (< 7 LPA), you can apply for a Dream company offer (7 to 15 LPA).\n2. If you get a Dream offer, you can only apply for a Super Dream company offer (> 15 LPA).\n3. Once you secure a Super Dream offer, you are fully blocked from applying to any further on-campus drives to ensure equal opportunities for all students."
+    },
+    {
+      "category": "General Process",
+      "question": "What documents are required during the placement registration?",
+      "answer": "You must have: \n1. 10th and 12th original marksheets and PDFs.\n2. All semester grade cards (SGPA/CGPA cards) up to the pre-final semester.\n3. Government ID proof (Aadhaar or Passport).\n4. A verified, single-page resume signed by the placement coordinator."
+    },
+    {
+      "category": "Preparation",
+      "question": "How can I update my resume on the placement portal?",
+      "answer": "Go to the Profile section on the student portal, upload your updated resume PDF, and submit it for verification. Once the placement officer reviews and approves it, the updated resume will be forwarded to recruiters."
+    },
+    {
+      "category": "Eligibility & Registration",
+      "question": "Is attendance mandatory for pre-placement talks (PPT)?",
+      "answer": "Yes, attendance is strictly mandatory (100%) for all PPTs of companies you have registered for. Failure to attend a PPT without a valid medical reason will lead to debarment from the recruitment drive and future drives for 2 weeks."
+    }
+  ],
+  "tips": [
+    {
+      "category": "Resume",
+      "title": "One-Page Resume Rules",
+      "content": "1. **Keep it to one page**: Recruiters spend an average of 6 seconds per resume. Keep it clean and concise.\n2. **Use the X-Y-Z formula**: Describe achievements as 'Accomplished [X] as measured by [Y], by doing [Z]'. For example: 'Reduced API response times by 35% (Y) by rewriting queries in PostgreSQL (Z)'.\n3. **Use standard layouts**: Avoid graphics, photos, or complex tables that break ATS (Applicant Tracking System) scanners. Use simple markdown headings and bullet points.\n4. **Check links**: Ensure links to GitHub, LinkedIn, and portfolios are active and professional."
+    },
+    {
+      "category": "Interview",
+      "title": "Mastering the STAR Method",
+      "content": "For behavioral and HR questions, structure answers using the STAR method:\n- **Situation**: Describe the context/background of the challenge you faced.\n- **Task**: Explain your responsibility or the goal you needed to achieve.\n- **Action**: Detail the steps you took to address the challenge (focus on *your* contributions, not just the team's).\n- **Result**: Highlight the outcome, quantifying achievements wherever possible."
+    },
+    {
+      "category": "Interview",
+      "title": "System Design Basics",
+      "content": "For design rounds:\n1. **Clarify Requirements**: Ask questions to understand the scale (users, QPS, data size), read/write ratio, and features needed.\n2. **High-Level Design**: Draw block diagrams (Client -> Load Balancer -> Web App -> Database/Cache).\n3. **Database Selection**: Explain why you chose SQL (ACID consistency) vs. NoSQL (scaling, document storage like MongoDB).\n4. **Optimizations**: Discuss Caching (Redis), Content Delivery Networks (CDNs), and Database Replication."
+    },
+    {
+      "category": "Interview",
+      "title": "Technical Coding Prep Plan",
+      "content": "1. **Learn core DS/Algo**: Master Arrays, Strings, Hashing, Linked Lists, Trees, Graphs, Recursion, and Dynamic Programming.\n2. **Practice on LeetCode/GeeksforGeeks**: Solve 150-200 curated questions (e.g. Blind 75 list).\n3. **Mock Interviews**: Practice speaking out loud while coding. Explain your thought process, time complexity, and space complexity before typing any code."
+    }
+  ]
+}
