@@ -1,5 +1,6 @@
-flask
-flask-cors
+fastapi
+uvicorn
+python-multipart
 pymongo
 huggingface-hub
 sentence-transformers
@@ -8,3 +9,8 @@ pypdf
 python-docx
 python-dotenv
 numpy
+requests
+urllib3
+reportlab
+pydantic
+httpx

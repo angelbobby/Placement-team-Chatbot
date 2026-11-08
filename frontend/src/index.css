@@ -96,6 +96,13 @@ body {
   transition: var(--transition-smooth);
 }
 
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
 .brand-section {
   display: flex;
   align-items: center;
@@ -138,6 +145,7 @@ body {
   gap: 6px;
   list-style: none;
   flex-grow: 1;
+  overflow-y: auto;
 }
 
 .nav-item-btn {
@@ -724,6 +732,11 @@ input:checked + .slider-switch:before {
   transition: var(--transition-smooth);
 }
 
+.form-select option {
+  color: #ffffff;
+  background-color: #000000;
+}
+
 .form-input:focus, .form-select:focus {
   border-color: var(--border-glass-glow);
   box-shadow: var(--glow-shadow-primary);
@@ -1296,6 +1309,12 @@ input:checked + .slider-switch:before {
   border-color: rgba(239, 68, 68, 0.2);
 }
 
+.alert.warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
 /* Scrollbars */
 ::-webkit-scrollbar {
   width: 8px;
@@ -1312,4 +1331,593 @@ input:checked + .slider-switch:before {
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(255,255,255,0.12);
+}
+
+/* =============================================================
+   RESUME BUILDER AND ANALYZER STYLES
+   ============================================================= */
+
+/* Resume Builder Split Layout */
+.resume-builder-layout {
+  display: grid;
+  grid-template-columns: 430px 1fr;
+  gap: 24px;
+  height: calc(100vh - 170px);
+  margin: -16px;
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .resume-builder-layout {
+    grid-template-columns: 1fr;
+    height: auto;
+    overflow-y: auto;
+  }
+}
+
+/* Chat side */
+.resume-chat-arena {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.resume-chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resume-input-container {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border-glass);
+  background-color: var(--bg-primary);
+}
+
+/* Live Preview side */
+.resume-preview-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.resume-preview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preview-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-glass);
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+}
+
+.action-btn:hover {
+  border-color: var(--border-glass-glow);
+  transform: translateY(-1px);
+}
+
+.action-btn.primary {
+  background: var(--accent-gradient);
+  color: white;
+  border: none;
+  box-shadow: var(--glow-shadow-primary);
+}
+
+.action-btn.primary:hover {
+  filter: brightness(1.1);
+}
+
+/* Scrolling viewport for the paper & forms */
+.resume-scrollable-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+/* Paper Style for ATS Resume Preview */
+.resume-paper {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  padding: 36px 40px;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  font-family: 'Arial', sans-serif;
+  font-size: 10pt;
+  line-height: 1.4;
+  text-align: left;
+  min-height: 750px;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+.resume-paper h1.paper-name {
+  font-size: 18pt;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4px;
+  color: #111827;
+  letter-spacing: -0.5px;
+}
+
+.resume-paper .paper-contact {
+  font-size: 8.5pt;
+  text-align: center;
+  color: #4b5563;
+  margin-bottom: 16px;
+}
+
+.resume-paper .paper-section-title {
+  font-size: 10.5pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #1f2937;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 2px;
+  margin-top: 14px;
+  margin-bottom: 8px;
+}
+
+.resume-paper .paper-summary {
+  font-size: 9pt;
+  color: #374151;
+  margin-bottom: 12px;
+}
+
+.resume-paper .paper-item-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 9pt;
+  color: #111827;
+}
+
+.resume-paper .paper-item-sub {
+  display: flex;
+  justify-content: space-between;
+  font-style: italic;
+  font-size: 8.5pt;
+  color: #4b5563;
+  margin-bottom: 4px;
+}
+
+.resume-paper .paper-bullet {
+  font-size: 8.5pt;
+  color: #374151;
+  margin-left: 12px;
+  list-style-type: disc;
+  margin-bottom: 2px;
+}
+
+.resume-paper .paper-skills {
+  font-size: 9pt;
+  color: #374151;
+}
+
+/* Manual Form Editor under Preview */
+.manual-editor-card {
+  margin-top: 8px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+}
+
+.editor-section-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.editor-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.editor-full-width {
+  grid-column: 1 / -1;
+}
+
+/* Resume Analyzer Dashboard */
+.analyzer-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+@media (max-width: 950px) {
+  .analyzer-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.analyzer-setup-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.file-drag-zone {
+  border: 2px dashed var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  background: rgba(0,0,0,0.05);
+}
+
+.file-drag-zone:hover, .file-drag-zone.active {
+  border-color: var(--border-glass-glow);
+  background: rgba(139, 92, 246, 0.03);
+}
+
+.file-drag-icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Dashboard Scoring circular gauge */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.score-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.circular-gauge {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 12px;
+}
+
+.circular-gauge svg {
+  transform: rotate(-90deg);
+}
+
+.circular-gauge-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 12;
+}
+
+.circular-gauge-fill {
+  fill: none;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.circular-gauge-fill.low { stroke: var(--danger); }
+.circular-gauge-fill.mid { stroke: var(--warning); }
+.circular-gauge-fill.high { stroke: var(--success); }
+
+.gauge-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: 800;
+  font-family: var(--font-sans);
+}
+
+/* Keywords Pills */
+.pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.keyword-pill {
+  font-size: 12.5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid transparent;
+}
+
+.keyword-pill.match {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  border-color: rgba(16, 185, 129, 0.15);
+}
+
+.keyword-pill.missing {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.15);
+}
+
+/* Bullet Optimization Panel */
+.optimize-section {
+  border-top: 1px solid var(--border-glass);
+  margin-top: 24px;
+  padding-top: 20px;
+}
+
+.bullet-item-rewrite {
+  background-color: rgba(0,0,0,0.12);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-glass);
+  padding: 12px 16px;
+  margin-top: 12px;
+}
+
+.original-bullet {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.suggested-bullet {
+  font-size: 14.5px;
+  color: var(--success);
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.copy-bullet-btn {
+  background: transparent;
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  font-size: 11px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+}
+
+.copy-bullet-btn:hover {
+  border-color: var(--border-glass-glow);
+  color: var(--text-primary);
+}
+
+/* Career Roadmap Timeline Layout */
+.roadmap-layout-wrapper {
+  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.roadmap-search-card {
+  padding: 20px 24px;
+}
+
+.roadmap-timeline-section {
+  margin-top: 12px;
+}
+
+/* Timeline Track */
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Central Line */
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: var(--border-glass);
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+
+/* Timeline Item block */
+.timeline-item {
+  padding: 10px 0 10px 45px;
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Timeline badge node on the line */
+.timeline-badge {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 4px;
+  top: 18px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  border: 4px solid var(--bg-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  z-index: 1;
+  box-shadow: var(--glow-shadow-primary);
+  transition: var(--transition-smooth);
+}
+
+.timeline-item:hover .timeline-badge {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px var(--accent-primary);
+}
+
+/* Timeline card container */
+.timeline-panel {
+  margin-bottom: 0;
+  transition: var(--transition-smooth);
+}
+
+.timeline-panel:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-glass-glow);
+  box-shadow: var(--glow-shadow-primary);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.timeline-phase-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.phase-duration-badge {
+  font-size: 12px;
+  font-weight: 700;
+  background-color: rgba(59, 130, 246, 0.1);
+  color: var(--accent-secondary);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  padding: 4px 10px;
+  border-radius: var(--radius-lg);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.timeline-phase-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+.timeline-skills-container {
+  border-top: 1px solid var(--border-glass);
+  padding-top: 12px;
+}
+
+/* Skill tag styling */
+.skill-tag-pill {
+  font-size: 12.5px;
+  font-weight: 600;
+  background-color: rgba(139, 92, 246, 0.08);
+  color: var(--text-primary);
+  border: 1px solid var(--border-glass);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+}
+
+.skill-tag-pill:hover {
+  border-color: var(--border-glass-glow);
+  background-color: rgba(139, 92, 246, 0.15);
+  color: #ffffff;
+}
+
+.pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Responsiveness for timeline */
+@media screen and (min-width: 768px) {
+  .timeline-container::after {
+    left: 50%;
+  }
+  
+  .timeline-item {
+    width: 50%;
+    padding: 10px 30px;
+  }
+  
+  /* Left items */
+  .timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-header {
+    justify-content: flex-end;
+  }
+  
+  .timeline-item:nth-child(odd) .timeline-panel {
+    text-align: right;
+  }
+  
+  .timeline-item:nth-child(odd) .pills-container {
+    justify-content: flex-end;
+  }
+  
+  /* Right items */
+  .timeline-item:nth-child(even) {
+    left: 50%;
+  }
+  
+  .timeline-badge {
+    left: 50%;
+    margin-left: -16px;
+  }
 }

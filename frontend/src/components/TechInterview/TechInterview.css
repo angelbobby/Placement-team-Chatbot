@@ -1,0 +1,462 @@
+.ti-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Landing Page */
+.ti-landing {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.ti-landing h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.ti-landing p {
+  color: var(--text-secondary);
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.ti-config-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.ti-config-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.ti-config-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.ti-select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.ti-select:focus {
+  border-color: var(--accent-primary);
+}
+
+.ti-btn-start {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.ti-btn-start:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent-secondary);
+}
+
+/* Interview Interface */
+.ti-workspace {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.ti-sidebar {
+  flex: 1;
+  min-width: 350px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.ti-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ti-timer {
+  font-weight: bold;
+  color: var(--accent-primary);
+}
+
+.ti-progress-bar-bg {
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.ti-progress-bar-fill {
+  height: 100%;
+  background-color: var(--accent-primary);
+  transition: width 0.3s ease;
+}
+
+.ti-question-box {
+  background-color: var(--bg-primary);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 20px;
+}
+
+.ti-ai-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  color: var(--accent-primary);
+  margin-bottom: 15px;
+}
+
+.ti-question-content {
+  line-height: 1.6;
+}
+
+.ti-answer-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ti-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  resize: vertical;
+  font-family: inherit;
+}
+
+.ti-textarea:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+}
+
+.ti-controls {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ti-btn {
+  padding: 10px 15px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.ti-btn-primary {
+  background-color: var(--accent-primary);
+  color: white;
+  flex: 1;
+}
+
+.ti-btn-primary:disabled {
+  background-color: var(--border-color);
+  cursor: not-allowed;
+}
+
+.ti-btn-secondary {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.ti-btn-danger {
+  background-color: #ff4757;
+  color: white;
+}
+
+/* Code Editor Panel */
+.ti-main-panel {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+}
+
+.ti-code-editor-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.ti-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ti-editor-lang {
+  font-family: monospace;
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.ti-btn-run {
+  background-color: #2ed573;
+  color: white;
+  padding: 6px 12px;
+}
+
+.ti-btn-run:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.ti-editor-body {
+  flex: 1;
+  display: flex;
+}
+
+.ti-textarea-code {
+  flex: 1;
+  width: 100%;
+  padding: 15px;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 14px;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+.ti-test-output {
+  height: 30%;
+  min-height: 150px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.ti-output-header {
+  padding: 8px 15px;
+  background-color: var(--bg-secondary);
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ti-output-content {
+  flex: 1;
+  padding: 15px;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-family: monospace;
+  overflow-y: auto;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* Performance Report */
+.ti-report {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  overflow-y: auto;
+  max-height: 90%;
+}
+
+.ti-report-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ti-report-header h2 {
+  color: var(--text-primary);
+}
+
+.ti-score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(var(--accent-primary) calc(var(--score) * 1%), var(--border-color) 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+}
+
+.ti-score-circle::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  background-color: var(--bg-secondary);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.ti-score-text {
+  position: relative;
+  z-index: 1;
+}
+
+.ti-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.ti-metric-card {
+  background-color: var(--bg-primary);
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.ti-metric-title {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.ti-metric-bar-bg {
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.ti-metric-bar-fill {
+  height: 100%;
+  background-color: var(--accent-primary);
+}
+
+.ti-report-section {
+  margin-bottom: 30px;
+}
+
+.ti-report-section h3 {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  color: var(--text-primary);
+}
+
+.ti-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ti-list li {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ti-list li::before {
+  content: "•";
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+.ti-question-review {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.ti-question-review h4 {
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.ti-review-topic {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: var(--accent-primary);
+  color: white;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  margin-bottom: 15px;
+}
+
+.ti-review-item {
+  margin-bottom: 10px;
+}
+
+.ti-review-label {
+  font-weight: bold;
+  color: var(--text-secondary);
+}
+
+.ti-report-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+  .ti-workspace {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .ti-sidebar {
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .ti-main-panel {
+    min-height: 500px;
+  }
+}
